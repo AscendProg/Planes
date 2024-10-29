@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descubre el Mensaje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffefd5;
+            /* Un suave color durazno como fondo */
+            text-align: center;
+        }
+
+        .container {
+            max-width: 340px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .option {
+            font-size: 64px;
+            /* Tamaño más grande para las cajas */
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            color: #ff69b4;
+            text-decoration: none;
+            /* Color rosa para mayor atractivo */
+            transition: transform 0.2s ease;
+        }
+
+        .option:hover {
+            transform: scale(1.1);
+            /* Efecto de crecimiento al pasar el mouse */
+        }
+
+        .message {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message:target {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        a.button {
+            background-color: #008cba;
+            /* Color azul para el botón */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 5px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.2s ease;
+        }
+
+        a.button:hover {
+            background-color: #007ba7;
+            /* Un azul ligeramente más oscuro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .valentine-surprise {
+            display: none;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffccd5;
+            /* Un color rosa suave */
+            border: 2px solid #ff749c;
+            /* Un borde rosa más fuerte */
+            border-radius: 15px;
+            /* Bordes redondeados para suavidad */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Sombra para profundidad */
+            text-align: center;
+            /* Alineación del texto */
+            font-family: 'Poppins', sans-serif;
+            /* Fuente */
+            color: #333;
+            /* Color de texto */
+            transition: transform 0.3s ease;
+            /* Animación suave */
+        }
+
+        .valentine-surprise:target {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .valentine-surprise:hover {
+            transform: translateY(-5px);
+            /* Efecto flotante al pasar el mouse */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            /* Sombra más profunda */
+        }
+
+        .valentine-surprise h3 {
+            color: #ff749c;
+            /* Color del título */
+            margin-bottom: 15px;
+            /* Espaciado del título */
+        }
+
+        .valentine-surprise p {
+            font-size: 16px;
+            /* Tamaño del texto */
+            line-height: 1.5;
+            /* Espaciado de línea */
+        }
+
+        .valentine-surprise .button {
+            display: inline-block;
+            /* Hacer que el botón sea en línea */
+            background-color: #ff749c;
+            /* Fondo del botón */
+            color: white;
+            /* Texto del botón */
+            padding: 10px 20px;
+            /* Relleno del botón */
+            text-decoration: none;
+            /* Sin subrayado */
+            border-radius: 5px;
+            /* Bordes redondeados del botón */
+            margin-top: 20px;
+            /* Espaciado arriba del botón */
+            transition: background-color 0.3s ease;
+            /* Animación del fondo */
+        }
+
+        .valentine-surprise .button:hover {
+            background-color: #ff4961;
+            /* Color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Cada corazón tiene un plan diferente, solo puedes escoger uno</h2>
+
+        <a href="#opcion1" class="option">❤️</a>
+        <a href="#opcion2" class="option">❤️</a>
+        <a href="#opcion3" class="option">❤️</a>
+
+        <div id="opcion1" class="message">
+            <div>¿Estás seguro de que quieres escoger este?</div>
+            <a href="#plan1" class="button">Confirmar Corazón 1</a>
+        </div>
+        <div id="opcion2" class="message">
+            <div>¿Estás seguro de que quieres escoger este?</div>
+            <a href="#plan2" class="button">Confirmar Corazón 2</a>
+        </div>
+        <div id="opcion3" class="message">
+            <div>¿Estás seguro de que quieres escoger este?</div>
+            <a href="#plan3" class="button">Confirmar Corazón 3</a>
+        </div>
+
+
+        <div id="plan1" class="valentine-surprise">
+            <h3>Feliz Día de San Valentín ❤️</h3>
+            <p>¡Has ganado una escapada conmigo para este fin de semana! Está todo organizado 🏔️</p>
+            <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
+        </div>
+        
+        <div id="plan2" class="valentine-surprise">
+            <h3>Feliz Día de San Valentín ❤️</h3>
+            <p>¡Has ganado un pícnic al atardecer en la playa! 🌅</p>
+            <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
+        </div>
+
+        <div id="plan3" class="valentine-surprise">
+            <h3>Feliz Día de San Valentín ❤️</h3>
+            <p>¡Has ganado una tarde de shopping con todo pagado! 🛍️</p>
+            <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
+        </div>
+    </div>
+
+</body>
+
+</html>
